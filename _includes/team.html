@@ -1,11 +1,10 @@
 <h3>Equipo</h3>
 
-<div class="row">
-  
+<div class="row"> 
 
-{% for member in site.data.capacitaciones.2017.members %}
+{% for member in include.members %}
 	<div class="4u 12u$(small)">
-    <img src="/assets/images/capacitaciones/2017/members/{{ member.pic }}" />
+    <img src="/assets/images/capacitaciones/{{include.year}}/members/{{ member.pic }}" />
 
     <p>
     <strong> {{ member.name }} </strong> <br />
@@ -23,9 +22,9 @@
 <div class="row">
   
 
-{% for trainee in site.data.capacitaciones.2017.trainees %}
+{% for trainee in include.trainees %}
   <div class="4u 12u$(small)">
-    <img src="/assets/images/capacitaciones/2017/trainees/{{ trainee.pic }}" />
+    <img src="/assets/images/capacitaciones/{{include.year}}/trainees/{{ trainee.pic }}" />
 
     <p>
     <strong> {{ trainee.name }} </strong>
