@@ -1,0 +1,37 @@
+<h3>Equipo</h3>
+
+<div class="row">
+  
+
+{% for member in site.data.capacitaciones.2017.members %}
+	<div class="4u 12u$(small)">
+    <img src="/assets/images/capacitaciones/2017/members/{{ member.pic }}" />
+
+    <p>
+    <strong> {{ member.name }} </strong> <br />
+    {{ member.position }}
+    </p> 
+
+  </div>
+{% endfor %}
+
+</div>
+
+
+<h3>Ingenier@s Trainee</h3>
+
+<div class="row">
+  
+
+{% for trainee in site.data.capacitaciones.2017.trainees %}
+  <div class="4u 12u$(small)">
+    <img src="/assets/images/capacitaciones/2017/trainees/{{ trainee.pic }}" />
+
+    <p>
+    <strong> {{ trainee.name }} </strong>
+    </p> 
+
+  </div>
+{% endfor %}
+
+</div>
