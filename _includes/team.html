@@ -4,7 +4,11 @@
 
 {% for member in include.members %}
 	<div class="4u 12u$(small)">
-    <img src="/assets/images/capacitaciones/{{include.year}}/members/{{ member.pic }}" />
+    {% if member.pic == nil %}
+      <img src="/assets/images/capacitaciones/none.jpg" />
+    {% else %}
+      <img src="/assets/images/capacitaciones/{{include.year}}/members/{{ member.pic }}" />
+    {% endif %}
 
     <p>
     <strong> {{ member.name }} </strong> <br />
@@ -24,8 +28,11 @@
 
 {% for trainee in include.trainees %}
   <div class="4u 12u$(small)">
-    <img src="/assets/images/capacitaciones/{{include.year}}/trainees/{{ trainee.pic }}" />
-
+    {% if trainee.pic == nil %}
+      <img src="/assets/images/capacitaciones/none.jpg" />
+    {% else %}
+      <img src="/assets/images/capacitaciones/{{include.year}}/trainees/{{ trainee.pic }}" />
+    {% endif %}
     <p>
     <strong> {{ trainee.name }} </strong>
     </p> 
